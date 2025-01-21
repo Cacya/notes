@@ -1,0 +1,13 @@
+site_name: 灼灼见青山的笔记本
+site_url: https://Cacya.github.io/notes/
+site_author: Cacya
+site_description: 灼灼见青山（Cacya）的笔记本
+# copyright: Copyright &copy; 2025 - Present <a href="https://github.com/Cacya/" target="_blank" rel="noopener">Cacya</a>
+
+theme:
+  name: material
+
+nav:
+  - Home: 
+    - index.md
+  - Computer Science
