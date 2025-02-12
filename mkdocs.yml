@@ -2,12 +2,105 @@ site_name: 灼灼见青山的笔记本
 site_url: https://Cacya.github.io/notes/
 site_author: Cacya
 site_description: 灼灼见青山（Cacya）的笔记本
+# 版权信息
 # copyright: Copyright &copy; 2025 - Present <a href="https://github.com/Cacya/" target="_blank" rel="noopener">Cacya</a>
 
 theme:
   name: material
+  language: 'zh'
+  font: 
+    text: Merriweather Sans
+    code: Red Hat Mono
 
-nav:
-  - Home: 
-    - index.md
-  - Computer Science
+  #设置logo为图标c
+  # icon:
+  #   logo: fontawesome/solid/c   
+
+  logo: assets/logo.jpg  #设置logo为自定义图片
+  favicon: assets/favicon.jpg #设置网站图标
+  
+  #添加出现在所有页面上的脚注
+  features:
+    - navigation.footer
+
+  palette:
+    # scheme: slate  #深色的配色方案
+    # primary: green #主要配色方案，顶部变为绿色，链接也变为绿色等
+    # accent: yellow #强调色,鼠标放链接上时颜色改变
+    
+    # 设置在明暗模式间切换
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    # Light Mode
+    - scheme: defualt
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: deep orange
+
+      
+
+
+
+
+# nav:
+#   - Home: 
+#     - index.md
+#   - Computer Science
+
+
+
+
+markdown_extensions:
+  #icons, emojis
+  # 能够使用icons和emojis
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  # code blocks
+  # 允许在代码块和内联代码块上高亮显示语法，
+  # 并允许直接包含来自其他文件的源代码
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  # - pymdownx.superfences
+
+  # diagrams
+  # 启用对 Mermaid.js 图的本地支持。
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  # content tabs
+  # 启用内容选项卡，并允许在内容选项卡中嵌套任意内容，
+  # 包括代码块和...更多内容选项卡！
+  # - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  # admonition
+  # 启用警告，允许使它们折叠并在告诫中嵌套任意内容
+  - admonition
+  - pymdownx.details
+  # - pymdownx.superfences
+
+extra:
+  social:
+    - icon: simple/youtube
+      link: https://www.youtube.com/@cacy-1
+    - icon: fontawesome/brands/github
+      link: https://github.com/Cacya
